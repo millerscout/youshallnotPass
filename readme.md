@@ -1,6 +1,6 @@
 # Notification Rate-Limiting System
 
-This project implements a basic notification rate-limiting system using **AWS Lambda** or **API Gateway**. The system is functional and can be deployed as a serverless function, but it is not the state-of-the-art. This design can be improved in the future with features like prioritization of notifications or using on-demand workers to group and throttle notifications effectively.
+This project implements a basic rate-limiting. The system is functional and can be deployed as a serverless function, but it is not the state-of-the-art. This design can be improved in the future with features like prioritization of notifications or using on-demand workers to group and throttle notifications effectively.
 
 ## Key Components
 
