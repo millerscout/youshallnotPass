@@ -128,4 +128,3 @@ I was considering other scenarios, but another approach would be to implement th
 The benefit of this approach is that it simplifies the setup of new applications by applying the rule. However, depending on the complexity of the rule, it could be vulnerable to attacks and may cause the WAF to fail 
 
 if the rule isn’t optimized for performance or lacks protection for these scenarios
----
