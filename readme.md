@@ -1,4 +1,4 @@
-# Notification Rate-Limiting System (Simple Backend Implementation)
+# Notification Rate-Limiting System
 
 This project implements a basic notification rate-limiting system using **AWS Lambda** or **API Gateway**. The system is functional and can be deployed as a serverless function, but it is not the state-of-the-art. This design can be improved in the future with features like prioritization of notifications or using on-demand workers to group and throttle notifications effectively.
 
@@ -40,12 +40,16 @@ If the rate limit has not been exceeded, the API will return a 200 OK response, 
 - **X-RateLimit-Limit**: The total number of allowed requests in the rate limit window.
 - **X-RateLimit-Remaining**: The number of requests remaining within the current window.
 - **X-RateLimit-Reset**: The time, in seconds, until the rate limit resets and you can send new requests.
+![image](https://github.com/user-attachments/assets/5397fb47-45e3-4a17-b70d-f58c97ae7472)
 
 If the rate limit is exceeded, the API will return a 429 Too Many Requests response, along with the same headers, indicating the rate limit details and when it will reset.
 
 ### Grafana Monitoring and Visualization 
 
 the system integrates with **Prometheus** and **Grafana** for monitoring the notification traffic and rate-limiting behavior. You can visualize the performance of the API, including the rate of successful requests (HTTP 200) and the frequency of rate-limited requests (HTTP 429), in the Grafana dashboard.
+a simple scenario would be like: ![Screenshot 2024-09-30 182509](https://github.com/user-attachments/assets/9ee87cf3-6e19-4f9d-bd16-17e9e3bb1541)
+if too many request starts to go above threadshold, there's something wrong with the rule, or someone's triggering too many times the api 
+
 
 ## Next Steps and Improvements
 
